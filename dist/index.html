@@ -3,208 +3,268 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="64x64" href="/favicon.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>熱血AIスクール | AIを武器に、未来を掴め</title>
-  <meta name="description" content="実務スキルと集客力を身につける、熱血AIスクール。AIツール活用からビジネス構築まで、あなたの挑戦をサポートします。" />
-  <script type="module" crossorigin src="/assets/index-DvvxwvPn.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-BZwdI-Dw.css">
+  <title>未来設計 AI SCHOOL | AIを武器に、自分らしい未来をつくる。</title>
+  <meta name="description" content="AIスキルで、仕事・働き方・人生の選択肢を広げる実践型AIスクール。マンツーマン指導・実践型カリキュラム・副業／独立サポートで、あなたの「なりたい未来」に伴走します。" />
+  <script type="module" crossorigin src="/assets/index-CbeMj-UB.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-C9n8zBeA.css">
 </head>
 
 <body>
+    <!-- 吹き出しアイコン（ボタン用） -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+      <symbol id="i-chat" viewBox="0 0 32 32"><path d="M16 5C8.8 5 3 9.7 3 15.5c0 3.2 1.8 6 4.6 7.9L6.5 28l5.3-2.9c1.3.3 2.7.5 4.2.5 7.2 0 13-4.7 13-10.5S23.2 5 16 5z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><circle cx="10.5" cy="15.5" r="1.7" fill="currentColor"/><circle cx="16" cy="15.5" r="1.7" fill="currentColor"/><circle cx="21.5" cy="15.5" r="1.7" fill="currentColor"/></symbol>
+      <symbol id="i-laurel" viewBox="0 0 40 80"><g fill="currentColor"><path d="M30 78C14 70 6 52 8 30 9 20 13 10 18 3l2 1C15 12 12 21 11 30c-2 20 6 37 21 45z"/><ellipse cx="6" cy="22" rx="3.5" ry="8" transform="rotate(-20 6 22)"/><ellipse cx="4" cy="36" rx="3.5" ry="8" transform="rotate(-40 4 36)"/><ellipse cx="6" cy="50" rx="3.5" ry="8" transform="rotate(-60 6 50)"/><ellipse cx="13" cy="62" rx="3.5" ry="8" transform="rotate(-75 13 62)"/><ellipse cx="16" cy="14" rx="3" ry="7" transform="rotate(20 16 14)"/><ellipse cx="16" cy="28" rx="3" ry="7" transform="rotate(10 16 28)"/><ellipse cx="17" cy="42" rx="3" ry="7" transform="rotate(-5 17 42)"/><ellipse cx="21" cy="55" rx="3" ry="7" transform="rotate(-25 21 55)"/></g></symbol>
+    </svg>
+
     <header class="header">
       <nav class="container nav">
-        <div class="logo">
-          <img src="/logo.png" alt="未来設計 AI SCHOOL" />
-        </div>
-        <ul class="nav-links">
+        <a href="#" class="logo" aria-label="未来設計 AI SCHOOL トップへ">
+          <svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true">
+            <circle cx="20" cy="20" r="17" fill="none" stroke="#C8102E" stroke-width="3.5"/>
+            <path d="M9 30 C14 22 20 18 30 11" stroke="#D4A63A" stroke-width="4" stroke-linecap="round" fill="none"/>
+            <path d="M24 9 L32 9 L31 17" stroke="#D4A63A" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <path d="M12 31 L20 14 L28 31" stroke="#C8102E" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          </svg>
+          <span class="logo-text"><b>未来設計</b><small>AI SCHOOL</small></span>
+        </a>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#worries">お悩み</a></li>
           <li><a href="#features">特徴</a></li>
-          <li><a href="#skills">習得スキル</a></li>
+          <li><a href="#skills">コース・料金</a></li>
           <li><a href="#flow">受講の流れ</a></li>
           <li><a href="#instructor">講師紹介</a></li>
         </ul>
-        <a href="#contact" class="btn btn-primary btn-sm">無料相談はこちら</a>
+        <a href="#contact" class="btn btn-primary btn-sm">無料相談はこちら <span class="arrow">›</span></a>
+        <button class="menu-btn" type="button" aria-label="メニューを開く" aria-controls="nav-links" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
       </nav>
     </header>
 
     <main>
-      <!-- Hero Section -->
+      <!-- Hero -->
       <section class="hero">
+        <div class="container hero-inner">
+          <div class="hero-text reveal">
+            <h1 class="hero-title">
+              <span class="nb"><span class="en">AI</span>を武器に、</span><br>
+              <span class="nb">自分らしい</span><br>
+              <span class="nb"><em>未来</em>をつくる。</span>
+            </h1>
+            <svg class="swoosh" viewBox="0 0 300 18" aria-hidden="true"><path d="M4 13 C80 2 200 2 296 9" stroke="#D4A63A" stroke-width="5" fill="none" stroke-linecap="round"/></svg>
+            <p class="hero-sub">
+              <span class="nb">AIスキルで、</span><br><span class="nb">仕事・働き方・人生の</span><br><span class="nb">選択肢を広げる</span><br>
+              <span class="nb">実践型AIスクール</span>
+            </p>
+          </div>
+          <div class="hero-illus illus reveal" data-scene="hero" style="animation-delay: .15s;"></div>
+        </div>
+        <div class="container text-center hero-cta reveal" style="animation-delay: .3s;">
+          <a href="#contact" class="btn btn-primary btn-lg"><svg class="btn-icon"><use href="#i-chat"/></svg>まずは無料相談<span class="arrow">›</span></a>
+        </div>
+
+        <!-- 3つの強み -->
         <div class="container">
-          <span class="hero-eyebrow reveal">実務スキル × 集客の仕組みづくり</span>
-          <h1 class="hero-title reveal"><span class="nb">AIを武器に、</span><br><span class="highlight"><span class="nb">自らの力で</span><span class="nb">未来を掴め！</span></span></h1>
-          <p class="hero-subtitle reveal" style="animation-delay: 0.2s;">
-            <span class="nb">「学んだだけで終わらせない」</span><br>
-            <span class="nb">実務スキル習得 × 集客の仕組みづくりを</span><span class="nb">両立する超実践型AIスクール</span>
-          </p>
-          <div class="reveal" style="animation-delay: 0.4s;">
-            <a href="#contact" class="btn btn-primary">無料相談はこちら</a>
+          <div class="badges reveal" style="animation-delay: .4s;">
+            <svg class="laurel" aria-hidden="true"><use href="#i-laurel"/></svg>
+            <div class="badge">
+              <svg viewBox="0 0 40 32" aria-hidden="true"><g fill="#D4A63A"><circle cx="20" cy="8" r="6"/><circle cx="8" cy="11" r="4.5"/><circle cx="32" cy="11" r="4.5"/><path d="M10 31c0-7 4.5-11 10-11s10 4 10 11z"/><path d="M0 30c0-5 3-8 8-8 2 0 3 .4 4 1-2 2-3.5 4.5-3.8 7z"/><path d="M40 30c0-5-3-8-8-8-2 0-3 .4-4 1 2 2 3.5 4.5 3.8 7z"/></g></svg>
+              <p>マンツーマン<br>指導</p>
+            </div>
+            <div class="badge">
+              <svg viewBox="0 0 40 32" aria-hidden="true"><g fill="none" stroke="#D4A63A" stroke-width="3" stroke-linejoin="round"><rect x="6" y="3" width="28" height="19" rx="2"/><path d="M1 28h38l-3 3H4z" fill="#D4A63A"/></g></svg>
+              <p>実践型<br>カリキュラム</p>
+            </div>
+            <div class="badge">
+              <svg viewBox="0 0 40 32" aria-hidden="true"><g fill="#D4A63A"><rect x="3" y="22" width="7" height="9" rx="1"/><rect x="13" y="16" width="7" height="15" rx="1"/><rect x="23" y="10" width="7" height="21" rx="1"/><rect x="33" y="4" width="6" height="27" rx="1" opacity=".6"/></g><path d="M3 16 L16 9 L24 11 L37 2" stroke="#C8102E" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg>
+              <p>副業・独立<br>サポート</p>
+            </div>
+            <svg class="laurel laurel-r" aria-hidden="true"><use href="#i-laurel"/></svg>
           </div>
         </div>
       </section>
 
-      <!-- Problem Section -->
-      <section id="problem" class="section bg-light">
-        <div class="container text-center">
-          <div class="section-head">
-            <span class="section-label">PROBLEM</span>
-            <h2 class="section-title"><span class="nb">なぜ、多くのAIスクールで</span><span class="nb">成果が出ないのか？</span></h2>
-          </div>
-          <div class="grid grid-3 reveal">
-            <div class="card problem-card">
-              <h3>高額すぎる受講料</h3>
-              <p>50万円以上の自己投資に見合わない、理論主体の講義内容。</p>
+      <!-- お悩み -->
+      <section id="worries" class="section worries">
+        <div class="container">
+          <h2 class="deco-title reveal"><span class="nb">こんな<em>お悩み</em>、</span><span class="nb">ありませんか？</span></h2>
+          <div class="worry-grid reveal">
+            <div class="worry">
+              <div class="bubble"><p><em>50万円以上</em>かけてスクールで学んだのに、<em>スキルが仕事に<br>つながらない</em>…</p></div>
+              <div class="illus" data-scene="worry1"></div>
             </div>
-            <div class="card problem-card">
-              <h3>スキルだけで終わる</h3>
-              <p>ツールの使い方は知っているが、それをどう仕事にするか教えてくれない。</p>
+            <div class="worry">
+              <div class="bubble"><p>AIを学んだものの、<em>何から仕事に<br>活かせばいいか</em><br>分からない…</p></div>
+              <div class="illus" data-scene="worry2"></div>
             </div>
-            <div class="card problem-card">
-              <h3>収益化できない</h3>
-              <p>スキルはあるのに「集客」ができず、結局仕事につながらない現実。</p>
+            <div class="worry">
+              <div class="bubble"><p><em>副業で稼ぎたい</em>のに、<em>案件の取り方や<br>進め方が</em><br>分からない…</p></div>
+              <div class="illus" data-scene="worry3"></div>
             </div>
           </div>
-          <div class="mt-lg reveal">
-            <p class="lead"><span class="nb">本スクールが、</span><span class="nb">その「壁」をぶち破ります。</span></p>
+
+          <div class="solution reveal">
+            <svg class="chevrons" viewBox="0 0 40 28" aria-hidden="true"><path d="M4 4 L20 14 L36 4 M4 14 L20 24 L36 14" stroke="#D4A63A" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <h2 class="deco-title solution-title">
+              <span class="nb">未来設計AIスクールなら</span><br>
+              <span class="nb">あなたの「なりたい未来」に合わせて</span><br>
+              <span class="nb"><em>最適な学習プラン</em>をご提案します</span>
+            </h2>
+            <svg class="swoosh swoosh-center" viewBox="0 0 300 18" aria-hidden="true"><path d="M4 13 C80 2 200 2 296 9" stroke="#D4A63A" stroke-width="5" fill="none" stroke-linecap="round"/></svg>
+          </div>
+
+          <div class="goals reveal">
+            <div class="goal goal-gold">
+              <div class="illus" data-scene="goal1"></div>
+              <div class="goal-text">
+                <h3>今の仕事の生産性を上げたい</h3>
+                <p><span class="nb">AIで業務を効率化し、</span><span class="nb">時間と成果を最大化する</span></p>
+              </div>
+            </div>
+            <div class="goal goal-red">
+              <div class="illus" data-scene="goal2"></div>
+              <div class="goal-text">
+                <h3>副業で収入を増やしたい</h3>
+                <p><span class="nb">AIを活用した副業スキルを身につけ、</span><span class="nb">新たな収入の柱をつくる</span></p>
+              </div>
+            </div>
+            <div class="goal goal-green">
+              <div class="illus" data-scene="goal3"></div>
+              <div class="goal-text">
+                <h3>将来は独立・起業を目指したい</h3>
+                <p><span class="nb">AIをビジネスに活用し、</span><span class="nb">自分の力で収益を生み出す</span></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="consult reveal">
+            <div class="illus" data-scene="consult"></div>
+            <div class="bubble bubble-left">
+              <p><span class="nb">まずは無料相談で、</span><br><span class="nb">あなたの目標や理想の働き方を</span><span class="nb">お聞かせください。</span><br><em class="nb">最適な学習プラン</em>をご提案します。</p>
+            </div>
+          </div>
+          <div class="text-center reveal">
+            <a href="#contact" class="btn btn-primary btn-lg"><svg class="btn-icon"><use href="#i-chat"/></svg>まずは無料相談<span class="arrow">›</span></a>
           </div>
         </div>
       </section>
 
-      <!-- Features Section -->
-      <section id="features" class="section">
+      <!-- 特徴 -->
+      <section id="features" class="section bg-cream">
         <div class="container">
           <div class="section-head">
             <span class="section-label">FEATURES</span>
             <h2 class="section-title">本スクールの特徴</h2>
           </div>
           <div class="feature-list reveal">
-            <div class="card feature">
+            <div class="feature">
               <div class="feature-num">01</div>
-              <div>
-                <h3>卒業後の仕事獲得まで伴走</h3>
-                <p>学んで終わりではなく、卒業とともに仕事獲得まで伴走します。担当の講師が集客・事業立ち上げまでサポートします。</p>
-              </div>
+              <h3>卒業後の仕事獲得まで伴走</h3>
+              <p>学んで終わりではなく、卒業とともに仕事獲得まで伴走します。担当の講師が集客・事業立ち上げまでサポートします。</p>
             </div>
-            <div class="card feature">
+            <div class="feature">
               <div class="feature-num">02</div>
-              <div>
-                <h3>受講生の業務に合わせた実践型カリキュラム</h3>
-                <p>「初級／中級／上級」をご用意しております。</p>
-              </div>
+              <h3>受講生の業務に合わせた実践型カリキュラム</h3>
+              <p>「初級／中級／上級」をご用意しております。</p>
             </div>
-            <div class="card feature">
+            <div class="feature">
               <div class="feature-num">03</div>
-              <div>
-                <h3>1対1のオンライン個別指導</h3>
-                <p>自分のペースに合わせて進められるだけではなく、内容もカスタマイズ可能。</p>
-                <p class="note">中級・上級は「文書／資料／デザイン／動画／Web・アプリ／自動化」の6分野から、受講生の目的に合わせて内容を差し替え可能です。</p>
-              </div>
+              <h3>1対1のオンライン個別指導</h3>
+              <p>自分のペースに合わせて進められるだけではなく、内容もカスタマイズ可能。</p>
+              <p class="note">中級・上級は「文書／資料／デザイン／動画／Web・アプリ／自動化」の6分野から、受講生の目的に合わせて内容を差し替え可能です。</p>
             </div>
-            <div class="card feature">
+            <div class="feature">
               <div class="feature-num">04</div>
-              <div>
-                <h3>実案件ベースのケーススタディ</h3>
-                <p>小さな飲食店の経費精算自動化・LINE公式アカウント連携・LP制作などを題材に、そのまま小規模事業者に提供できるスキルが身につきます。</p>
-              </div>
+              <h3>実案件ベースのケーススタディ</h3>
+              <p>小さな飲食店の経費精算自動化・LINE公式アカウント連携・LP制作などを題材に、そのまま小規模事業者に提供できるスキルが身につきます。</p>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Skills Section -->
-      <section id="skills" class="section bg-light">
+      <!-- コース・料金 -->
+      <section id="skills" class="section">
         <div class="container">
           <div class="section-head">
-            <span class="section-label">ROADMAP</span>
+            <span class="section-label">COURSE</span>
             <h2 class="section-title">習得スキルロードマップ</h2>
           </div>
           <div class="grid grid-3">
-            <div class="card skill-level reveal">
-              <div class="level-badge">LEVEL 1</div>
-              <h3>初級：実務支援・副業</h3>
+            <div class="course reveal">
+              <div class="course-head"><span class="level-badge">LEVEL 1</span><h3>初級：実務支援・副業</h3></div>
               <p>AIを活用した制作・業務支援スキルを習得し、副業・フリーランスへの第一歩を踏み出す。</p>
-              <ul class="skill-list">
+              <ul class="check-list">
                 <li>議事録作成（録音・録画データ）</li>
                 <li>資料作成代行（PowerPoint）</li>
                 <li>ロゴ・名刺・画像制作</li>
                 <li>チラシ・バナー制作</li>
               </ul>
-              <div class="price-tag">10万円<span>(税別)</span></div>
+              <div class="price-tag">10<small>万円</small><span>(税別)</span></div>
             </div>
-            <div class="card skill-level reveal" style="animation-delay: 0.2s;">
-              <div class="level-badge">LEVEL 2</div>
-              <h3>中級：業務効率化</h3>
+            <div class="course reveal" style="animation-delay: 0.15s;">
+              <div class="course-head"><span class="level-badge">LEVEL 2</span><h3>中級：業務効率化</h3></div>
               <p>AIと既存ツール（Notion等）を組み合わせた高度な自動化・データ活用スキルを習得する。</p>
-              <ul class="skill-list">
+              <ul class="check-list">
                 <li>Notion連携・構築</li>
                 <li>AIデータ分析</li>
                 <li>Webページ制作支援</li>
                 <li>GASによるツール作成</li>
               </ul>
-              <div class="price-tag">15万円<span>(税別)</span></div>
+              <div class="price-tag">15<small>万円</small><span>(税別)</span></div>
             </div>
-            <div class="card skill-level reveal" style="animation-delay: 0.4s;">
-              <div class="level-badge">LEVEL 3</div>
-              <h3>上級：開発・システム</h3>
+            <div class="course reveal" style="animation-delay: 0.3s;">
+              <div class="course-head"><span class="level-badge">LEVEL 3</span><h3>上級：開発・システム</h3></div>
               <p>ITの基礎知識を武器に、AIを活用したシステム開発、アプリケーション開発の領域へ。</p>
-              <ul class="skill-list">
+              <ul class="check-list">
                 <li>AIシステム構築</li>
                 <li>アプリケーション開発</li>
                 <li>ITパスポート・基本情報基礎</li>
               </ul>
-              <div class="price-tag">20万円<span>(税別)</span></div>
+              <div class="price-tag">20<small>万円</small><span>(税別)</span></div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Flow Section -->
-      <section id="flow" class="section">
+      <!-- 受講の流れ -->
+      <section id="flow" class="section bg-cream">
         <div class="container">
           <div class="section-head">
             <span class="section-label">FLOW</span>
             <h2 class="section-title">受講から卒業までの流れ</h2>
           </div>
-          <div class="reveal">
+          <div class="flow reveal">
             <div class="flow-step">
-              <div class="step-num">01</div>
-              <div class="step-img" aria-hidden="true">
-                <!-- 無料相談：吹き出し -->
-                <svg viewBox="0 0 48 48" fill="none" stroke="#D90429" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 10h32a3 3 0 0 1 3 3v16a3 3 0 0 1-3 3H22l-8 7v-7H8a3 3 0 0 1-3-3V13a3 3 0 0 1 3-3z"/><circle cx="16" cy="21" r="1.5" fill="#D90429"/><circle cx="24" cy="21" r="1.5" fill="#D90429"/><circle cx="32" cy="21" r="1.5" fill="#D90429"/></svg>
-              </div>
+              <div class="step-num">STEP<b>01</b></div>
+              <div class="illus step-illus" data-scene="flow1"></div>
               <div>
                 <h3>無料相談</h3>
                 <p>まずはオンラインの無料相談で、AIの可能性と本スクールの全貌をご紹介します。</p>
               </div>
             </div>
             <div class="flow-step">
-              <div class="step-num">02</div>
-              <div class="step-img" aria-hidden="true">
-                <!-- カウンセリング：2人 -->
-                <svg viewBox="0 0 48 48" fill="none" stroke="#D90429" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="16" r="6"/><circle cx="33" cy="16" r="6"/><path d="M5 40c0-7 5-11 11-11s11 4 11 11"/><path d="M27 31c1.8-1.3 3.8-2 6-2 6 0 10 4 10 11"/></svg>
-              </div>
+              <div class="step-num">STEP<b>02</b></div>
+              <div class="illus step-illus" data-scene="flow2"></div>
               <div>
                 <h3>個別カウンセリング</h3>
                 <p>あなたの現状と目標をヒアリングし、最適なコースをご提案します。</p>
               </div>
             </div>
             <div class="flow-step">
-              <div class="step-num">03</div>
-              <div class="step-img" aria-hidden="true">
-                <!-- オンライン授業：ノートPC -->
-                <svg viewBox="0 0 48 48" fill="none" stroke="#D90429" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="10" width="30" height="20" rx="2"/><path d="M4 36h40l-3 4H7z"/><circle cx="24" cy="18" r="3"/><path d="M19 26c1-2.5 3-3.5 5-3.5s4 1 5 3.5"/></svg>
-              </div>
+              <div class="step-num">STEP<b>03</b></div>
+              <div class="illus step-illus" data-scene="flow3"></div>
               <div>
                 <h3>1対1のオンライン授業</h3>
                 <p>全8回、約1.5〜2ヶ月間の個別指導がスタート。AIを武器に変えます。</p>
               </div>
             </div>
             <div class="flow-step">
-              <div class="step-num">04</div>
-              <div class="step-img" aria-hidden="true">
-                <!-- 卒業：角帽 -->
-                <svg viewBox="0 0 48 48" fill="none" stroke="#D90429" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M24 10 3 19l21 9 21-9z"/><path d="M12 23v9c0 3 5 6 12 6s12-3 12-6v-9"/><path d="M42 20v11"/></svg>
-              </div>
+              <div class="step-num">STEP<b>04</b></div>
+              <div class="illus step-illus" data-scene="flow4"></div>
               <div>
                 <h3>卒業、そして未来設計士へ</h3>
                 <p>スキル習得はゴールではありません。卒業後は未来設計士と共に仕事を立ち上げます。</p>
@@ -214,8 +274,8 @@
         </div>
       </section>
 
-      <!-- Instructor Section -->
-      <section id="instructor" class="section bg-light">
+      <!-- 講師紹介 -->
+      <section id="instructor" class="section">
         <div class="container">
           <div class="section-head">
             <span class="section-label">INSTRUCTOR</span>
@@ -245,19 +305,23 @@
         </div>
       </section>
 
-      <!-- Final CTA -->
+      <!-- 最終CTA -->
       <section id="contact" class="section cta-section text-center">
         <div class="container reveal">
-          <h2 class="cta-title"><span class="nb">本気で人生を変えたい</span><br><span class="highlight nb">「あなた」を待っている。</span></h2>
-          <p class="lead mb-md">無料相談、本日受付中。</p>
-          <a href="https://lin.ee/sSl0WTE" class="btn btn-primary" target="_blank" rel="noopener noreferrer">無料相談を予約する</a>
+          <div class="cta-card">
+            <div class="illus cta-illus" data-scene="consult"></div>
+            <h2 class="cta-title"><span class="nb">本気で人生を変えたい</span><br><em class="nb">「あなた」を待っている。</em></h2>
+            <p class="cta-lead">無料相談、本日受付中。</p>
+            <a href="https://lin.ee/sSl0WTE" class="btn btn-primary btn-lg" target="_blank" rel="noopener noreferrer"><svg class="btn-icon"><use href="#i-chat"/></svg>無料相談を予約する<span class="arrow">›</span></a>
+            <p class="cta-note">LINEで簡単にご予約いただけます</p>
+          </div>
         </div>
       </section>
     </main>
 
     <footer class="footer">
       <div class="container">
-        <img src="/logo.png" alt="未来設計 AI SCHOOL" style="height: 40px; margin-bottom: 0.75rem;" />
+        <p class="footer-logo"><b>未来設計</b> AI SCHOOL</p>
         <p>&copy; 2026 未来設計 AI SCHOOL. All Rights Reserved.</p>
       </div>
     </footer>
