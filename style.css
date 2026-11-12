@@ -52,7 +52,7 @@ h1, h2, h3, h4 {
   text-wrap: balance;
 }
 
-p, li { text-wrap: pretty; }
+p, li { text-wrap: pretty; font-size: 1.05rem; }
 em { font-style: normal; color: var(--red); }
 .nb { display: inline-block; }
 .text-center { text-align: center; }
@@ -207,14 +207,28 @@ em { font-style: normal; color: var(--red); }
 .swoosh-center { margin: 0.25rem auto 0; }
 
 .hero-sub {
-  font-size: clamp(0.98rem, 2.4vw, 1.15rem);
+  font-size: clamp(1.1rem, 2.6vw, 1.3rem);
   font-weight: 500;
   color: var(--text);
   letter-spacing: 0.06em;
 }
 
-.hero-illus svg { width: 100%; height: auto; display: block; }
-.hero-cta { margin-top: 1.5rem; }
+.swoosh-hero { height: 22px; }
+.hero { position: relative; }
+.hero-inner { position: relative; }
+.hero-illus { position: relative; z-index: 0; justify-self: end; width: min(100%, 470px); }
+.hero-illus img { width: 100%; height: auto; display: block; }
+.hero-text { position: relative; z-index: 1; }
+/* 画像の下端に重なる波 */
+.hero-wave {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 56px;
+  margin-top: -40px;
+}
+.hero-cta { margin-top: 0.5rem; }
 
 /* 3つの強み */
 .badges {
@@ -237,7 +251,7 @@ em { font-style: normal; color: var(--red); }
 .badge p {
   font-family: var(--font-round);
   font-weight: 700;
-  font-size: clamp(0.82rem, 2.6vw, 1rem);
+  font-size: clamp(0.95rem, 2.8vw, 1.15rem);
   color: var(--ink);
   line-height: 1.4;
   margin-top: 0.25rem;
@@ -279,7 +293,7 @@ em { font-style: normal; color: var(--red); }
 /* 斜線で挟む見出し */
 .deco-title {
   text-align: center;
-  font-size: clamp(1.35rem, 4.6vw, 2.1rem);
+  font-size: clamp(1.5rem, 5vw, 2.2rem);
   font-weight: 900;
   position: relative;
   padding: 0 2.6rem;
@@ -298,8 +312,9 @@ em { font-style: normal; color: var(--red); }
     linear-gradient(var(--gold), var(--gold)) 4px 2px / 3px 18px no-repeat,
     linear-gradient(var(--gold), var(--gold)) 15px 10px / 3px 18px no-repeat;
 }
-.deco-title::before { left: 0; transform: translateY(-50%) skewX(-25deg); }
-.deco-title::after { right: 0; transform: translateY(-50%) skewX(25deg); }
+/* 左は「＼」、右は「／」で見出しに向かう集中線 */
+.deco-title::before { left: 0; transform: translateY(-50%) skewX(25deg); }
+.deco-title::after { right: 0; transform: translateY(-50%) skewX(-25deg); }
 
 /* ---------- お悩み ---------- */
 .worries { background: var(--white); }
@@ -337,7 +352,9 @@ em { font-style: normal; color: var(--red); }
   border-bottom: 0;
   filter: drop-shadow(0 4px 3px rgba(120, 90, 40, 0.08));
 }
-.bubble p { font-weight: 700; font-size: 0.95rem; line-height: 1.6; color: var(--ink); }
+/* お悩みの吹き出しは左揃え */
+.worry .bubble { text-align: left; justify-content: flex-start; }
+.bubble p { font-weight: 700; font-size: 1.08rem; line-height: 1.6; color: var(--ink); }
 
 .solution { text-align: center; margin-top: 3rem; }
 .chevrons { width: 40px; height: 28px; margin-bottom: 0.75rem; }
@@ -361,8 +378,8 @@ em { font-style: normal; color: var(--red); }
 }
 .goal .illus svg { width: 100%; height: auto; display: block; }
 .goal-text { border-left: 1.5px solid rgba(0, 0, 0, 0.12); padding-left: 1.25rem; }
-.goal h3 { font-size: clamp(1.05rem, 3.4vw, 1.3rem); font-weight: 900; margin-bottom: 0.2rem; }
-.goal p { font-size: 0.95rem; }
+.goal h3 { font-size: clamp(1.15rem, 3.6vw, 1.4rem); font-weight: 900; margin-bottom: 0.2rem; }
+.goal p { font-size: 1.05rem; }
 .goal-gold { background: var(--gold-soft); }
 .goal-gold h3 { color: var(--gold-dark); }
 .goal-red { background: var(--red-soft); }
@@ -428,9 +445,20 @@ em { font-style: normal; color: var(--red); }
   justify-content: center;
   box-shadow: 0 4px 10px rgba(200, 16, 46, 0.3);
 }
-.feature h3 { font-size: 1.15rem; margin-bottom: 0.5rem; }
-.feature p { font-size: 0.95rem; }
-.feature .note { margin-top: 0.6rem; font-size: 0.85rem; color: var(--muted); background: var(--cream); padding: 0.6rem 0.8rem; border-radius: 10px; }
+.feature-illus {
+  background: var(--cream);
+  border-radius: 14px;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  overflow: hidden;
+  height: 130px;
+}
+.feature-illus svg { height: 100%; width: auto; display: block; }
+.feature h3 { font-size: 1.25rem; margin-bottom: 0.5rem; }
+.feature p { font-size: 1.05rem; }
+.feature .note { margin-top: 0.6rem; font-size: 0.95rem; color: var(--muted); background: var(--cream); padding: 0.6rem 0.8rem; border-radius: 10px; }
 
 /* ---------- コース ---------- */
 .grid { display: grid; gap: 1.5rem; }
@@ -464,14 +492,14 @@ em { font-style: normal; color: var(--red); }
   padding: 0.15rem 0.75rem;
   margin-bottom: 0.4rem;
 }
-.course h3 { font-size: 1.15rem; }
-.course > p { padding: 1.25rem 1.5rem 0; font-size: 0.95rem; }
+.course h3 { font-size: 1.25rem; }
+.course > p { padding: 1.25rem 1.5rem 0; font-size: 1.05rem; }
 .check-list { list-style: none; padding: 0.75rem 1.5rem 0; }
 .check-list li {
   position: relative;
   padding: 0.45rem 0 0.45rem 1.6rem;
   border-bottom: 1px dashed var(--line);
-  font-size: 0.95rem;
+  font-size: 1.05rem;
 }
 .check-list li::before {
   content: '';
@@ -531,8 +559,8 @@ em { font-style: normal; color: var(--red); }
 .step-num b { display: block; font-size: 2.2rem; color: var(--red); }
 .step-illus { background: var(--gold-soft); border-radius: 50%; aspect-ratio: 1; overflow: hidden; display: flex; align-items: flex-end; }
 .step-illus svg { width: 100%; height: auto; display: block; }
-.flow-step h3 { font-size: 1.15rem; margin-bottom: 0.2rem; }
-.flow-step p { font-size: 0.95rem; color: var(--muted); }
+.flow-step h3 { font-size: 1.25rem; margin-bottom: 0.2rem; }
+.flow-step p { font-size: 1.05rem; color: var(--muted); }
 
 /* ---------- 講師紹介 ---------- */
 .instructor {
@@ -555,10 +583,11 @@ em { font-style: normal; color: var(--red); }
   color: var(--gold-dark);
   font-size: 0.9rem;
 }
-.instructor-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.instructor-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 66% 30%; }
 .instructor-role-en { font-family: var(--font-num); font-weight: 800; font-size: 0.8rem; letter-spacing: 0.15em; color: var(--gold); }
 .instructor-role { font-weight: 700; color: var(--muted); margin-bottom: 0.25rem; }
-.instructor-name { font-size: clamp(1.7rem, 4vw, 2.3rem); font-weight: 900; margin-bottom: 1.5rem; }
+.instructor-name { font-size: clamp(1.7rem, 4vw, 2.3rem); font-weight: 900; margin-bottom: 1rem; }
+.instructor-intro { margin-bottom: 1.5rem; line-height: 1.9; }
 .instructor-about { background: var(--cream); border-radius: var(--radius); padding: 1.75rem 2rem; }
 .instructor-about h3 { font-size: 1.15rem; margin-bottom: 0.75rem; padding-left: 0.75rem; border-left: 4px solid var(--red); }
 .instructor-about p + p { margin-top: 1rem; }
@@ -584,7 +613,7 @@ em { font-style: normal; color: var(--red); }
 .cta-illus svg { width: 100%; height: auto; display: block; }
 .cta-title { font-size: clamp(1.5rem, 4.6vw, 2.3rem); font-weight: 900; margin-bottom: 0.75rem; }
 .cta-lead { font-family: var(--font-round); font-weight: 700; font-size: 1.15rem; margin-bottom: 1.5rem; color: var(--gold-dark); }
-.cta-note { margin-top: 1rem; font-size: 0.85rem; color: var(--muted); }
+.cta-note { margin-top: 1rem; font-size: 0.95rem; color: var(--muted); }
 
 /* ---------- Footer ---------- */
 .footer {
@@ -601,7 +630,7 @@ em { font-style: normal; color: var(--red); }
 /* ---------- Responsive ---------- */
 @media (max-width: 900px) {
   .instructor { grid-template-columns: 1fr; }
-  .instructor-photo { max-width: 260px; margin: 0 auto; }
+  .instructor-photo { width: 100%; max-width: 260px; margin: 0 auto; }
   .feature-list { grid-template-columns: 1fr; gap: 2rem; }
 }
 
@@ -628,40 +657,69 @@ em { font-style: normal; color: var(--red); }
 
   .section { padding: 3.5rem 0; }
 
-  .hero { padding-top: 84px; }
-  .hero-inner { grid-template-columns: 1fr; gap: 0; position: relative; }
-  .hero-text { position: relative; z-index: 1; }
+  .hero { padding-top: 72px; }
+  .hero-inner { grid-template-columns: 1fr; gap: 0; }
+  .hero-text { padding: 1.5rem 0 4.5rem; }
+  /* 人物は右側いっぱいに置き、見出しと説明文を左に重ねる */
   .hero-illus {
     position: absolute;
-    right: -1.5rem;
-    bottom: -0.5rem;
-    width: 58%;
-    z-index: 0;
+    right: -1.25rem;
+    top: 0;
+    width: 60%;
   }
-  .hero-sub { font-size: 0.9rem; max-width: 52%; }
-  .badge p { font-size: 0.78rem; }
-  .badge svg { width: 36px; height: 30px; }
-  .laurel { width: 24px; height: 52px; }
-  .solution-title { font-size: 1.15rem; padding: 0 1.8rem; }
+  .hero-sub { font-size: 1.1rem; max-width: 62%; letter-spacing: 0.04em; }
+  .swoosh-hero { width: 54%; }
+  .badge p { font-size: 0.98rem; }
+  .badge svg { width: 42px; height: 34px; }
+  .badge { padding: 0 0.25rem; }
+  .laurel { width: 18px; height: 44px; }
+  .solution-title { font-size: 1.3rem; padding: 0 1.6rem; letter-spacing: 0.02em; }
 
-  .worry-grid { grid-template-columns: repeat(3, 1fr); gap: 0.5rem; }
-  .bubble { padding: 1rem 0.6rem; min-height: 120px; }
-  .bubble p { font-size: 0.72rem; }
-  .worry .illus { width: 100%; max-width: 110px; }
+  /* お悩み：スマホでは横長の吹き出しを縦に並べ、人物を左右交互に置く */
+  .worry-grid { grid-template-columns: 1fr; gap: 1rem; }
+  .worry { flex-direction: row; align-items: center; gap: 0.5rem; }
+  .worry:nth-child(even) { flex-direction: row-reverse; }
+  .worry .illus { flex: 0 0 84px; width: 84px; margin: 0; }
+  .bubble {
+    flex: 1;
+    border-radius: 999px;
+    min-height: 0;
+    padding: 1rem 1.4rem;
+  }
+  .bubble p { font-size: 1.05rem; }
+  /* しっぽを人物側（右）へ */
+  .worry .bubble::after {
+    left: auto;
+    right: -12px;
+    top: 50%;
+    bottom: auto;
+    transform: translateY(-50%);
+    border: 12px solid transparent;
+    border-left-color: var(--white);
+    border-right: 0;
+  }
+  .worry:nth-child(even) .bubble::after {
+    right: auto;
+    left: -12px;
+    border-left: 0;
+    border-right: 12px solid var(--white);
+  }
 
-  .goal { grid-template-columns: 110px 1fr; gap: 0.75rem; padding: 0.6rem 1rem 0.6rem 0.5rem; }
+  .goal { grid-template-columns: 92px 1fr; gap: 0.75rem; padding: 0.6rem 1rem 0.6rem 0.5rem; }
   .goal-text { padding-left: 0.85rem; }
-  .goal p { font-size: 0.85rem; }
+  .goal p { font-size: 1rem; }
 
-  .consult { grid-template-columns: 100px 1fr; gap: 0.5rem; }
+  .consult { grid-template-columns: 84px 1fr; gap: 0.5rem; }
   .bubble-left { border-radius: 24px; padding: 1rem 1.1rem; }
-  .bubble-left p { font-size: 0.85rem; }
+  .bubble-left p { font-size: 1.02rem; }
 
   .btn-lg { min-width: 100%; }
+  .cta-card { padding-inline: 1rem; }
+  .cta-title { font-size: 1.4rem; letter-spacing: 0.02em; }
 
   .flow-step { grid-template-columns: 56px 84px 1fr; gap: 0.75rem; padding: 0.9rem 1rem 0.9rem 0.75rem; }
   .step-num b { font-size: 1.7rem; }
-  .flow-step p { font-size: 0.85rem; }
+  .flow-step p { font-size: 1rem; }
 
   .instructor-about { padding: 1.5rem 1.25rem; }
 }
@@ -672,3 +730,24 @@ em { font-style: normal; color: var(--red); }
   .hero-title { font-size: 1.85rem; }
   .deco-title { padding: 0 2rem; }
 }
+
+/* ---------- ソコストのイラスト（img） ---------- */
+.illus { position: relative; }
+.illus img { display: block; width: 100%; height: auto; }
+.feature-illus img { width: auto; height: 88%; max-width: 92%; object-fit: contain; }
+.step-illus { align-items: center; justify-content: center; }
+.step-illus img { width: 82%; height: 82%; object-fit: contain; }
+.goal .illus img { max-height: 110px; object-fit: contain; }
+.cta-illus img { max-height: 150px; width: auto; margin: 0 auto; }
+/* 人物の頭の横に添えるモヤモヤ（竜巻のようなぐるぐる） */
+.worry .illus svg.moya-mark {
+  position: absolute;
+  top: -6%;
+  right: -16%;
+  width: 44%;
+  height: auto;
+}
+.moya-mark g { stroke-width: 2.4; }
+/* モヤモヤは人物と吹き出しの間（奇数行は左、偶数行は右）に置く */
+.worry:nth-child(odd) .illus svg.moya-mark { right: auto; left: -18%; }
+.worry:nth-child(even) .illus svg.moya-mark { right: -18%; }

@@ -10,5 +10,8 @@
   },
   "devDependencies": {
     "vite": "^6.0.0"
+  },
+  "dependencies": {
+    "budoux": "0.9.3"
   }
 }

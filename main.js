@@ -1,5 +1,12 @@
 import './style.css'
+import { HTMLProcessingParser } from '@budoux/html_processor.js'
+import { model as jaModel } from '@budoux/data/models/ja.js'
 import { renderIllustrations } from './illustrations.js'
+
+// 文節の途中で改行しないよう、BudouX で改行位置を入れる
+// （iPhone の Safari は CSS の word-break: auto-phrase に未対応のため）
+const parser = new HTMLProcessingParser(jaModel)
+document.querySelectorAll('main, .footer').forEach((el) => parser.applyToElement(el))
 
 renderIllustrations()
 
