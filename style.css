@@ -626,6 +626,8 @@ em { font-style: normal; color: var(--red); }
 }
 .footer-logo { font-family: var(--font-round); font-size: 1.1rem; color: var(--gold); margin-bottom: 0.25rem; letter-spacing: 0.08em; }
 .footer-logo b { color: var(--red); }
+.footer-logo { display: flex; align-items: center; justify-content: center; gap: 0.5rem; }
+.footer-logo-mark { width: 32px; height: 32px; }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 900px) {
