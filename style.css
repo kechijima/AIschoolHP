@@ -139,8 +139,10 @@ em { font-style: normal; color: var(--red); }
   gap: 0.5rem;
   text-decoration: none;
   margin-right: auto;
+  min-width: 0;
 }
-.logo-img { height: 46px; width: auto; display: block; }
+/* 幅が足りないときはロゴ側が縮む（メニューボタンやCTAを押しつぶさない） */
+.logo-img { height: 46px; width: auto; max-width: 100%; object-fit: contain; object-position: left center; display: block; }
 .logo-text { display: flex; flex-direction: column; line-height: 1.1; }
 .logo-text b { font-family: var(--font-round); font-size: 1.3rem; color: var(--red); letter-spacing: 0.08em; }
 .logo-text small { font-family: var(--font-num); font-weight: 800; font-size: 0.7rem; color: var(--gold); letter-spacing: 0.12em; }
@@ -157,6 +159,7 @@ em { font-style: normal; color: var(--red); }
 
 .menu-btn {
   display: none;
+  flex: none;
   width: 40px;
   height: 40px;
   background: none;
@@ -638,6 +641,7 @@ em { font-style: normal; color: var(--red); }
 
 @media (max-width: 768px) {
   .nav { gap: 0.6rem; }
+  .nav > .btn-sm { flex: none; white-space: nowrap; }
   .menu-btn { display: flex; }
   .nav-links {
     position: absolute;
@@ -724,6 +728,11 @@ em { font-style: normal; color: var(--red); }
   .flow-step p { font-size: 1rem; }
 
   .instructor-about { padding: 1.5rem 1.25rem; }
+}
+
+@media (max-width: 480px) {
+  /* スマホではヘッダーのCTAを隠してロゴを大きく見せる（ページ内に無料相談ボタンあり） */
+  .nav > .btn-sm { display: none; }
 }
 
 @media (max-width: 420px) {
