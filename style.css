@@ -140,7 +140,7 @@ em { font-style: normal; color: var(--red); }
   text-decoration: none;
   margin-right: auto;
 }
-.logo-mark { width: 40px; height: 40px; }
+.logo-img { height: 46px; width: auto; display: block; }
 .logo-text { display: flex; flex-direction: column; line-height: 1.1; }
 .logo-text b { font-family: var(--font-round); font-size: 1.3rem; color: var(--red); letter-spacing: 0.08em; }
 .logo-text small { font-family: var(--font-num); font-weight: 800; font-size: 0.7rem; color: var(--gold); letter-spacing: 0.12em; }
@@ -627,7 +627,7 @@ em { font-style: normal; color: var(--red); }
 .footer-logo { font-family: var(--font-round); font-size: 1.1rem; color: var(--gold); margin-bottom: 0.25rem; letter-spacing: 0.08em; }
 .footer-logo b { color: var(--red); }
 .footer-logo { display: flex; align-items: center; justify-content: center; gap: 0.5rem; }
-.footer-logo-mark { width: 32px; height: 32px; }
+.footer-logo-img { height: 36px; width: auto; }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 900px) {
@@ -654,7 +654,7 @@ em { font-style: normal; color: var(--red); }
   }
   .nav-open .nav-links { max-height: 360px; }
   .nav-links a { display: block; padding: 0.9rem 1.5rem; border-top: 1px solid var(--line); }
-  .logo-mark { width: 34px; height: 34px; }
+  .logo-img { height: 38px; }
   .logo-text b { font-size: 1.1rem; }
 
   .section { padding: 3.5rem 0; }
